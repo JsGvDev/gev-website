@@ -1,0 +1,14 @@
+#products {
+    background: #196c96;
+    color: #fff;
+    padding: 5px;
+    .panel {
+        background-color: transparent;
+        .header{
+            font-weight: bolder;
+        }
+        .body {
+            color: #333;
+        }
+    }
+}

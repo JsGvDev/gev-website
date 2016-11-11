@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="well bs-component">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>Front Page</legend>
+          <div class="panel panel-default">
+            <label class="col-lg-2 control-label">Message:</label>
+            <div class="panel-body">
+              {{frontPage.msg}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="textAreaFrontPage" class="col-lg-2 control-label">Message:</label>
+            <div class="col-lg-10" [ngClass]="{'has-error': errors.frontPage}" >
+              <textarea #textAreaFrontPage class="form-control" rows="3" id="textArea_1"></textarea>
+              <span class="help-block" *ngIf="errors.frontPage">*Message is empty.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12 text-right">
+              <button type="submit" class="btn btn-warning" (click)="downloadJSON()" *ngIf="contentModified">Download</button>
+              <button type="submit" class="btn btn-primary" (click)="onSaveFrontPage(textAreaFrontPage.value)">Save</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Get Start</legend>
+          <div class="panel panel-default">
+            <label class="col-lg-2 control-label">Title:</label>
+            <div class="panel-body">
+              {{getStart.title}}
+            </div>
+            <label class="col-lg-2 control-label">Text:</label>
+            <div class="panel-body">
+              {{getStart.msg}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTitleGetStart" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-10" [ngClass]="{'has-error': errors.getStart}">
+              <input #inputTitleGetStart type="text" class="form-control" id="inputTitleGetStart" placeholder="Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="textAreaGetStart" class="col-lg-2 control-label">Text:</label>
+            <div class="col-lg-10" [ngClass]="{'has-error': errors.getStart}">
+              <textarea #textAreaGetStart class="form-control" rows="3" id="textAreaGetStart"></textarea>
+              <span class="help-block" *ngIf="errors.getStart">*Title or text are empty.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12 text-right">
+              <button type="submit" class="btn btn-warning" (click)="downloadJSON()" *ngIf="contentModified">Download</button>
+              <button type="submit" class="btn btn-primary" (click)="onSaveGetStart(inputTitleGetStart.value,textAreaGetStart.value)">Save</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>About Us</legend>
+          <div class="panel panel-default">
+            <label class="col-lg-2 control-label">Title:</label>
+            <div class="panel-body">
+              {{aboutUs.title}}
+            </div>
+            <label class="col-lg-2 control-label">Text:</label>
+            <div class="panel-body">
+              {{aboutUs.msg}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTitleAboutUs" class="col-lg-2 control-label">Title</label>
+            <div class="col-lg-10" [ngClass]="{'has-error': errors.aboutUs}">
+              <input #inputTitleAboutUs type="text" class="form-control" id="inputTitleAboutUs" placeholder="Title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="textArea_3" class="col-lg-2 control-label">Text:</label>
+            <div class="col-lg-10" [ngClass]="{'has-error': errors.aboutUs}">
+              <textarea #textAreaGetStart class="form-control" rows="3" id="textArea_3"></textarea>
+              <span class="help-block" *ngIf="errors.aboutUs">*Title or text are empty.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12 text-right">
+              <button type="submit" class="btn btn-warning" (click)="downloadJSON()" *ngIf="contentModified">Download</button>
+              <button type="submit" class="btn btn-primary" (click)="onSaveAboutUs(inputTitleAboutUs.value,textAreaGetStart.value)">Save</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Products</legend>
+          <div class="form-group">
+            <div class="col-xs-12 text-right">
+              <button type="submit" class="btn btn-warning" (click)="downloadJSON()" *ngIf="contentModified">Download</button>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

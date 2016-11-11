@@ -1,0 +1,30 @@
+{
+  "frontPage": {
+    "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies."
+  },
+  "getStart": {
+    "title": "Lorem Ipsum ipsum ipsum",
+    "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dignissim metus, id mollis risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam et nulla in ante semper tincidunt id ut nulla. Nunc ultrices pellentesque sem, at tempor lectus laoreet eu. Quisque non turpis quis nulla bibendum luctus. Integer eu eros est. Vestibulum faucibus elit suscipit blandit volutpat. Donec aliquet congue ante id blandit. Nam efficitur mi non diam pulvinar, luctus efficitur erat fringilla. Nulla nunc ipsum, venenatis vitae lacus ac, ultricies imperdiet lorem."
+  },
+  "products": [
+    {
+        "name": "Prod 1",
+        "description": "Description prod 1",
+        "img": "item_1"
+    },
+    {
+       "name": "Prod 2",
+        "description": "Description prod 2",
+        "img": "item_1"
+    },
+    {
+        "name": "Prod 3",
+        "description": "Description prod 3",
+        "img": "item_1"
+    } 
+  ],
+  "aboutUs": {
+    "title": "Lorem Ipsum",
+    "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dignissim metus, id mollis risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam et nulla in ante semper tincidunt id ut nulla. Nunc ultrices pellentesque sem, at tempor lectus laoreet eu. Quisque non turpis quis nulla bibendum luctus. Integer eu eros est. Vestibulum faucibus elit suscipit blandit volutpat. Donec aliquet congue ante id blandit. Nam efficitur mi non diam pulvinar, luctus efficitur erat fringilla. Nulla nunc ipsum, venenatis vitae lacus ac, ultricies imperdiet lorem."
+  }
+}

@@ -1,0 +1,190 @@
+@import "../../stylesheets/media-queries";
+#header-social-media {
+    a, svg {
+        display: block;
+    }     
+    a {
+        position: relative; // IE8
+        height: 50px; // IE8
+        height: 5.0rem;
+        width: 50px; // IE8
+        width: 5.0rem;
+        padding: 0;
+    }
+    svg {
+        height: 100%;
+        width: 100%;
+    }   
+    // IE8:
+    em {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: -.75em;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .facebook, .twitter {
+        color: hsl(200, 90, 95); // IE8
+        fill: hsl(220, 90, 95);
+        &:hover {
+            background: hsl(220, 60, 100);
+            color: hsl(220, 60, 60); // IE8
+            fill: hsl(220, 60, 60);
+            transition: background-color .5s, transform .5s ease-out;
+        }
+    }
+    @media (min-width: $screen-tablet) {
+        margin-right: 25px;
+    }
+}    
+
+.hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    top: 23px;
+    left: 8px;
+    right: 8px;
+    height: 5px;
+    background: white;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    content: "";
+}
+
+.hamburger span::before {
+    top: -10px;
+}
+
+.hamburger span::after {
+    bottom: -10px;
+}
+
+.hamburger-x {
+    background-color: #ff3264;
+}
+
+.hamburger-x span {
+    transition: background 0s 0.3s;
+}
+
+.hamburger-x span::before,
+.hamburger-x span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.hamburger-x span::before {
+    transition-property: top, transform;
+}
+
+.hamburger-x span::after {
+    transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.hamburger-x.is-active {
+    background-color: #cb0032;
+}
+
+.hamburger-x.is-active span {
+    background: none;
+}
+
+.hamburger-x.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger-x.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger-x.is-active span::before,
+.hamburger-x.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+#sidebar {
+    position: absolute;
+    top:55px;
+    right: 5px;
+    background: #2290c9;
+    width: 240px;
+    height: auto;
+    box-sizing: border-box;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin: 0;
+            a {
+                padding: 15px 20px;
+                font-size: 16px;
+                font-weight: 100;
+                color: white;
+                text-decoration: none;
+                display: block;
+                border-bottom: 1px solid #196c96;
+                -webkit-transition: background 0.3s ease-in-out;
+                -moz-transition: background 0.3s ease-in-out;
+                -ms-transition: background 0.3s ease-in-out;
+                -o-transition: background 0.3s ease-in-out;
+                transition: background 0.3s ease-in-out;
+                @media (max-width: $screen-xs-max) {
+                    &.social-media {
+                        width: 60%;
+                        float: left;
+                    }
+                    &.facebook, &.twitter {
+                        width: 20%;
+                        padding: 1px;
+                        float: left;
+                        padding-bottom: 0;
+                        color: hsl(200, 90, 95); // IE8
+                        fill: hsl(220, 90, 95);
+                    }
+                }
+            }
+            &:hover a {
+                background: #196c96;
+            }
+        }
+    }
+}

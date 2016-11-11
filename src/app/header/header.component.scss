@@ -1,0 +1,16 @@
+$background: hsl(210, 45, 10);
+#header {
+    min-height: 50px;
+    .navbar {
+        background: $background;
+        margin-bottom: 0;
+        position: fixed;
+        width: 100%;
+        .logo {
+            padding: 10px 15px;
+        }
+        .title {
+            color: #fff;
+        }
+    }
+}

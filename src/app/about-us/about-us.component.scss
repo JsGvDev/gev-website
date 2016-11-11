@@ -1,0 +1,87 @@
+@import "../stylesheets/media-queries";
+$background: hsl(210, 45, 10); // 210, 45, 10
+%social-icon-hover {
+    border-radius: 100%;
+    color: $background; // IE8
+    fill: $background;
+    transform: scale(1.25);
+    transition: background-color .5s, transform .5s ease-out;
+}
+
+#about-us {
+    // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    // https://codepen.io/ruandre/pen/howFi
+    background: $background;
+    font-size: .625em; // 10px for rems
+    .soc {
+        font-size: 0;
+        list-style: none;
+        margin: 0;
+        li {
+            display: inline-block;
+            .email {
+                color: #fff; // IE8
+                fill: #fff;
+                opacity: 0.8;
+            }
+            legend {
+                color: #fff; // IE8
+                fill: #fff;
+                opacity: 0.8;
+            }
+            @media (max-width: $screen-xs-max) { 
+                legend {
+                    position: relative;
+                    bottom: 35px;
+                    left: 20px;
+                }
+            }
+            @media (min-width: 1025px) { 
+                legend {
+                    position: relative;
+                    bottom: 35px;
+                    left: 20px;
+                }
+            }
+        }
+        a, svg {
+            display: block;
+        }    
+        a {
+            position: relative; // IE8
+            height: 96px; // IE8
+            height: 9.6rem;
+            width: 96px; // IE8
+            width: 9.6rem;
+        }
+        svg {
+            height: 100%;
+            width: 100%;
+        }   
+        // IE8:
+        em {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-top: -.75em;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        @media (max-width: $screen-xs-max) { 
+            height: 100px;
+        }      
+    }
+    .title {
+        padding-top: 15px;
+        legend {
+            color: hsl(200, 90, 95);
+        }
+    }
+    .text {
+        color: hsl(200, 90, 95);
+        text-align: justify;
+    }
+}

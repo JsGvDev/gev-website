@@ -1,0 +1,14 @@
+<section id="products">
+  <div class="panel panel-default">
+    <div (click)="ShowHideItems()" class="panel-heading header">List of Products <span class="glyphicon glyphicon-menu-{{state}} pull-right" aria-hidden="true"></span></div>
+    <div class="panel-body body" *ngIf="state === 'down'">
+      <div class="col-sm-4 col-xs-12" *ngFor="let item of products">
+        <div class="well well-lg text-center">
+          <legend>{{item.name}}</legend>
+          <img src="../../assets/img/items/{{item.img}}.png" class="img-rounded" alt="item">
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

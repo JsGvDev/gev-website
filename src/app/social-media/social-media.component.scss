@@ -1,0 +1,67 @@
+$background: hsl(220, 60, 60); // 210, 45, 10
+%social-icon-hover {
+    border-radius: 100%;
+    color: $background; // IE8
+    fill: $background;
+    transform: scale(1.25);
+    transition: background-color .5s, transform .5s ease-out;
+}
+
+#social-media {
+    // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    // https://codepen.io/ruandre/pen/howFi
+    background: $background;
+    font-size: .625em; // 10px for rems
+    .soc {
+        display: block;
+        font-size: 0;
+        list-style: none;
+        margin: 0;
+        padding: 10px; // IE8
+        padding: 1.0rem;
+        text-align: center;
+        legend {
+            color: hsl(200, 90, 95);
+        }
+        li {
+            display: inline-block;
+            margin: 12px; // IE8
+            margin: 1.2rem;
+            .facebook, .twitter {
+                color: hsl(200, 90, 95); // IE8
+                fill: hsl(220, 90, 95);
+                &:hover {
+                    background: hsl(220, 60, 100);
+                    @extend %social-icon-hover;
+                }
+            }
+        }
+        a, svg {
+            display: block;
+        }
+            
+        a {
+            position: relative; // IE8
+            height: 96px; // IE8
+            height: 9.6rem;
+            width: 96px; // IE8
+            width: 9.6rem;
+        }
+        svg {
+            height: 100%;
+            width: 100%;
+        }   
+        // IE8:
+        em {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-top: -.75em;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }           
+    }
+}
